@@ -18,5 +18,8 @@ public class BukuMain24 {
         bk2.terjual(11);
         bk2.tampilInformasi();
 
+        Buku24 bukuRafa = new Buku24 ("The Miracle of Science", "H.M.Yusuf bin Abdurrahman", 208, 1, 89000); 
+        bukuRafa.tampilInformasi();
+
     }
 }
