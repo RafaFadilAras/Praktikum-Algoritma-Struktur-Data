@@ -1,7 +1,7 @@
 public class Buku24 {
 
     static String judul, pengarang;
-    static int halaman, stok, harga;
+    static int halaman, stok, harga, hargaTotal, disc, hargaBayar;
     
     void tampilInformasi() {
         System.out.println("Judul : " +judul);
@@ -9,14 +9,15 @@ public class Buku24 {
         System.out.println("Jumlah halaman : " +halaman);
         System.out.println("Sisa stok : " +stok);
         System.out.println("Harga : " +harga);
+        System.out.println("Harga Total : " +hargaTotal);
+        System.out.println("Diskon : " +disc);
+        System.out.println("Harga Bayar :" +hargaBayar);
+
     }
 
     void terjual (int jml) {
-        if (stok > 0) {
+        if (stok<0) {
             stok -= jml;
-            System.out.println("Sisa stok buku " +judul+ "berkurang" + jml + "");
-        } else {
-            System.out.println("Stok tidak cukup");
         }
     }
 
