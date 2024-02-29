@@ -6,6 +6,13 @@ public class Segitiga24 {
         this.alas = a;
         this.tinggi = t;
     }
+    public double hitungLuas() {
+        return (0.5 * alas * tinggi);
+    }
+    public double hitungKeliling() {
+        double sisiMiring = Math.sqrt(alas * alas + tinggi * tinggi);
+        return (alas + tinggi + sisiMiring);
+    }
 }
 
 
