@@ -5,6 +5,10 @@ public class Pangkat24 {
         nilai = n;
         pangkat = p;
     }
+
+    public void Menu() {
+
+    }
     
     int pangkatBF (int a, int n) {
         int hasil = 1;
