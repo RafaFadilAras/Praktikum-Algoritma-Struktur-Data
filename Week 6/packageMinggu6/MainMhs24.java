@@ -17,9 +17,9 @@ public class MainMhs24 {
         ListMhs.tampil();
         System.out.println();
 
-        System.out.println("Data Mahasiswa setelah sorting desc berdasarkan IPK : ");
+        System.out.println("Data Mahasiswa setelah sorting asc berdasarkan IPK : ");
         System.out.println();
-        ListMhs.selectionSort();
+        ListMhs.insertionSort();
         ListMhs.tampil();
     }
 }
