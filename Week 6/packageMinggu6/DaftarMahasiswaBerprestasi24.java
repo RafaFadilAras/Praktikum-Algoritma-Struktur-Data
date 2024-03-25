@@ -28,4 +28,18 @@ public class DaftarMahasiswaBerprestasi24 {
             }
         }
     }
+    void selectionSort() {
+        for (int i=0; i<ListMhs.length; i++) {
+            int idxMin = 1;
+            for (int j = i+1; j<ListMhs.length; j++) {
+                if (ListMhs[j].ipk < ListMhs[idxMin].ipk) {
+                    idxMin = j;
+                }
+            }
+            // swap
+            Mahasiswa24 tmp = ListMhs[idxMin];
+            ListMhs[idxMin] = ListMhs[i];
+            ListMhs[i] = tmp;
+        }
+    }
 }
