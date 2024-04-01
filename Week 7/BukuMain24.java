@@ -12,7 +12,7 @@ public class BukuMain24 {
         for (int i=0; i < jumBuku; i++) {
             System.out.println("------------------------------------------------------");
             System.out.print("Kode buku    : ");
-            int kodeBuku = s.nextInt();
+            String kodeBuku = s1.nextLine();
             System.out.print("Judul Buku   : ");
             String judulBuku = s1.nextLine();
             System.out.print("Tahun terbit : ");
@@ -30,21 +30,32 @@ public class BukuMain24 {
         System.out.println("Data keseluruhan buku : ");
         data.tampil();
 
-        System.out.println("____________________________");
-        System.out.println("____________________________");
-        System.out.println("Pencarian data : ");
-        System.out.println("Masukkan kode buku yang dicari");
-        System.out.print("Kode buku : ");
-        int cari = s.nextInt();
-        System.out.println("menggunakan sequential search");
-        int posisi = data.FindSeqSearch(cari);
-        data.tampilPosisi(cari, posisi);
-        data.tampilData(cari, posisi);
+        System.out.print("Cari buku berdasarkan judul : ");
+        String cariJudul = s1.nextLine();
+        data.bubblesort();
+        int posisi = data.findSeqSearchJudul(cariJudul);
+        System.out.println("sequential search : ");
+        data.tampilData(cariJudul, posisi);
+        System.out.println("binary search : ");
+        posisi = data.FindBinarySearchJdl(cariJudul, 0, data.listBk.length - 1);
+        data.tampilData(cariJudul, posisi);
+        
+    //     System.out.println("____________________________");
+    //     System.out.println("____________________________");
+    //     System.out.println("Pencarian data : ");
+    //     System.out.println("Masukkan kode buku yang dicari");
+    //     System.out.print("Kode buku : ");
+    //     String cari = s1.nextLine();
+    //     System.out.println("menggunakan sequential search");
+    //     int posisi = data.FindSeqSearch(cari);
+    //     data.tampilPosisi(cari, posisi);
+    //     data.tampilData(cari, posisi);
 
-        System.out.println("============================");
-        System.out.println("menggunakan binary search");
-        posisi = data.FindBinarySearch(cari, 0, jumBuku -1);
-        data.tampilPosisi(cari, posisi);
-        data.tampilData(cari, posisi);
-    }
+    //     System.out.println("============================");
+    //     System.out.println("menggunakan binary search");
+    //     posisi = data.FindBinarySearch(cari, jumBuku, posisi);
+    //     data.tampilPosisi(cari, posisi);
+    //     data.tampilData(cari, posisi);
+    // }
+}
 }
