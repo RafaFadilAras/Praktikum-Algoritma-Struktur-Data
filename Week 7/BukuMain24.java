@@ -41,7 +41,10 @@ public class BukuMain24 {
         data.tampilPosisi(cari, posisi);
         data.tampilData(cari, posisi);
 
-        Buku24 dataBuku24 = data.FindBuku24(null, null);
-        dataBuku24.tampilDataBuku();
+        System.out.println("============================");
+        System.out.println("menggunakan binary search");
+        posisi = data.FindBinarySearch(cari, 0, jumBuku -1);
+        data.tampilPosisi(cari, posisi);
+        data.tampilData(cari, posisi);
     }
 }
