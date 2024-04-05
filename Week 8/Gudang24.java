@@ -57,7 +57,7 @@ public class Gudang24 {
     public Barang24 lihatBarangTeratas() {
         if (!isEmpty()) {
             Barang24 barangTeratas = tumpukan [top];
-            System.out.println("Barang teratas : " + barangTeratas );
+            System.out.println("Barang teratas : " + barangTeratas.nama );
             return barangTeratas;
         } else {
             System.out.println("Tumpukan barang kosong");
