@@ -1,13 +1,12 @@
 import java.util.Scanner;
 public class Utama24 {
     public static void main(String[] args) {
-        //Gudang24 gudang = new Gudang24(7);
+        Gudang24 gudang = new Gudang24(7);
         Scanner sc = new Scanner (System.in);
-        System.out.print("Masukkan kapasitas gudang : ");
-        int kapasitasGudang = sc.nextInt();
-        sc.nextLine();
-
-        Gudang24 gudang = new Gudang24(kapasitasGudang);
+        //System.out.print("Masukkan kapasitas gudang : ");
+        //int kapasitasGudang = sc.nextInt();
+        //sc.nextLine();
+        //Gudang24 gudang = new Gudang24(kapasitasGudang);
         
         while (true) {
             System.out.println();
