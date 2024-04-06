@@ -79,7 +79,7 @@ public class Gudang24 {
 
     public String konversiDesimalKeBiner (int kode) {
         StackKonversi24 stack = new StackKonversi24();
-        while (kode > 0) {
+        while (kode != 0) {
             int sisa = kode % 2;
             stack.push(sisa);
             kode = kode / 2;
@@ -90,4 +90,36 @@ public class Gudang24 {
         } 
         return biner;
     }
+
+    public Barang24 lihatBarangTerbawah () {
+        if (!isEmpty()) {
+            Barang24 barangTerbawah = tumpukan[0];
+            System.out.println("Barang terbawah : " +barangTerbawah.nama);
+            return barangTerbawah;
+        } else {
+            System.out.println("Tumpukan barang kosong.");
+            return null;
+        }
+    }
+
+    public Barang24 cariBarang (int kodeBarang) {
+        if (!cekKosong()) {
+            for (int i = top; i >= 0; i--) {
+                if (tumpukan[i].kode == kodeBarang) {
+                System.out.println("Barang dengan kode " + kodeBarang + " ditemukan.");
+                System.out.println("Informasi barang");
+                System.out.println("Kode barang : " + tumpukan[i].kode);
+                System.out.println("Nama barang : " + tumpukan[i].nama);
+                System.out.println("Kategori    : " + tumpukan[i].kategori);
+                return tumpukan[i];
+                }
+            }
+            System.out.println("Barang tidak ditemukan.");
+            return null;
+        } else {
+            System.out.println("tumpukan barang kosong.");
+            return null;
+        }
+    }
+
 }
