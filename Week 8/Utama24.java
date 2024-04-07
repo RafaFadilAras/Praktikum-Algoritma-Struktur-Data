@@ -16,8 +16,9 @@ public class Utama24 {
             System.out.println("3. Tampilkan tumpukan barang");
             System.out.println("4. Tampilkan barang teratas");
             System.out.println("5. tampilkan barang terbawah");
-            System.out.println("6. Cari Barang");
-            System.out.println("7. Keluar");
+            System.out.println("6. Cari Barang (kode)");
+            System.out.println("7. Cari Barang (nama)");
+            System.out.println("8. Keluar");
             System.out.print("Pilih Menu : ");
             int pilihan = sc.nextInt();
             sc.nextLine();
@@ -59,6 +60,12 @@ public class Utama24 {
                 break;
 
                 case 7 :
+                System.out.print("Masukkan nama barang yang dicari : ");
+                nama = sc.nextLine();
+                gudang.cariBarang(nama);
+                break;
+
+                case 8 :
                 System.exit(0);
 
                 default :
